@@ -11,7 +11,10 @@ const UseEffectCleanup = () => {
   };
   useEffect(() => {
     window.addEventListener("resize", checkSize);
-    // window.ezzz
+    return () => {
+      console.log("u what mate");
+      window.removeEventListener("resize", checkSize);
+    };
   });
   return (
     <>
