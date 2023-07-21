@@ -9,6 +9,7 @@ const UseEffectFetchData = () => {
     const response = await fetch(url);
     const users = await response.json(url);
     console.log(users);
+    setUsers(users);
   };
   useEffect(() => {
     getUsers();
