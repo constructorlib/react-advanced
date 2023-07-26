@@ -11,17 +11,23 @@ const url = "https://api.github.com/users/QuincyLarson";
 // };
 
 // myForEach(names, console.log);
+
 function orderPizza(callback) {
   setTimeout(() => {
-    let pizza = "(V)";
-    callback(pizza); // ??
+    let pizza = "🍕";
+    callback(pizza);
   }, 2000);
 }
+
 function isReady(pizza) {
   console.log(`Eat me ${pizza}`);
 }
+
 orderPizza(isReady);
+
+// Removed the problematic if block.
 console.log("Call Abu Bakr");
+
 // Async = part of code depends on some other part of code
 // function myLog(name) {
 //   console.log(name);
