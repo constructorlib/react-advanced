@@ -9,9 +9,12 @@ const myForEach = (arr, cb) => {
     cb(element);
   }
 };
-myForEach(names, (name) => {
-  console.log(name);
-});
+
+myForEach(names, console.log);
+
+// function myLog(name) {
+//   console.log(name);
+// }
 // const MultipleReturns = () => {
 //   const [loading, setLoading] = useState(true);
 //   const [isError, setIsError] = useState(false);
