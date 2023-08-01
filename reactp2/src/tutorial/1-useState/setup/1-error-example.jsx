@@ -23,3 +23,15 @@ const ErrorExample = () => {
 };
 
 export default ErrorExample;
+/*
+  8/1/2023 review
+  Here I used useState, lets examine it. 
+  const [title, setTitle] = useState("Random Title");
+  I declared const title and function setTitle
+  Equal to what? Is this a default state? Do check out. 
+
+  UPD: It is, it is actually a default state. setTitle changes the default state. Much interesting. 
+
+  
+
+*/
