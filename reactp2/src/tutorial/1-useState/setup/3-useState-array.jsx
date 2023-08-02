@@ -22,7 +22,7 @@ const UseStateArray = () => {
   };
   const removeItem = (id) => {
     setPeople((oldPeople) => {
-      let newPeople = oldPeople.filter((person) => person.id !== id);
+      let newPeople = oldPeople.filter((person) => person.id !== id); // DUDE
       return newPeople;
     });
   };
@@ -48,3 +48,20 @@ const UseStateArray = () => {
 };
 
 export default UseStateArray;
+
+/*
+  I did some woodoo magic here, wow. Okay, let's examine. 
+
+  l2 Alright, I'm getting an array from data.js
+
+  const [people, setPeople] = useState(data);
+  Same as before, const people, change function and default state of function 
+  Which is data from data.js
+
+  Declare a boolean const 
+  const [namesChanged, setNamesChanged] = useState(false);
+  boolean default state being false (names are not changed)
+  Line 9 to 11 seems so stupid. if(default) like my man, it is already like that. 
+  What you thinking?
+
+*/
