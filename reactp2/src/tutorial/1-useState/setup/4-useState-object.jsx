@@ -7,11 +7,31 @@ const UseStateObject = () => {
   // alert("General Kenobi!");
   const changeMessage = () => {
     let hold = window.prompt("Change: name, age, message");
+    let inputProcessed = false;
+    if (hold !== "name" && hold !== "age" && hold !== "message") {
+      alert("Invalid input! Please enter 'name', 'age', or 'message'.");
+      return; // Exit the function if the input is invalid.
+    }
     let holdnew = window.prompt("Enter: ");
-    if (hold == "name") setName(holdnew);
-    if (hold == "age") setAge(holdnew);
-    if (hold == "message") setMessage(holdnew);
-    // else alert("Abort!"); // why is else working?
+    if (hold === "name") {
+      setName(holdnew);
+      inputProcessed = true;
+    }
+
+    if (hold === "age") {
+      setAge(holdnew);
+      inputProcessed = true;
+    }
+
+    if (hold === "message") {
+      setMessage(holdnew);
+      inputProcessed = true;
+    }
+
+    if (!inputProcessed) {
+      alert("Abort!");
+      window.location.reload(); // Refresh the page when no valid input is provided.
+    }
   };
 
   return (
