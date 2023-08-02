@@ -6,9 +6,14 @@ const UseStateObject = () => {
   const [message, setMessage] = useState("random message");
   // alert("General Kenobi!");
   const changeMessage = () => {
-    setMessage("hello there!");
-    alert("General Kenobi!");
+    let hold = window.prompt("Change: name, age, message");
+    let holdnew = window.prompt("Enter: ");
+    if (hold == "name") setName(holdnew);
+    if (hold == "age") setAge(holdnew);
+    if (hold == "message") setMessage(holdnew);
+    // else alert("Abort!"); // why is else working?
   };
+
   return (
     <>
       <h3>{name}</h3>
@@ -22,3 +27,11 @@ const UseStateObject = () => {
 };
 
 export default UseStateObject;
+/*
+Alriiight. What do we have here? 
+const name, age, message with the appropriate functions that change them. 
+Didn't use setName and setAge why? Pointless functions. Maybe try prompt? 
+window.prompt()
+prompt() is not a function, rather it is a method
+why is else working tho?
+*/
