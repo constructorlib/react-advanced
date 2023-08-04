@@ -4,13 +4,12 @@ const UseStateObject = () => {
   const [name, setName] = useState("peter");
   const [age, setAge] = useState("23");
   const [message, setMessage] = useState("random message");
-  // alert("General Kenobi!");
   const changeMessage = () => {
     let hold = window.prompt("Change: name, age, message");
     let inputProcessed = false;
     if (hold !== "name" && hold !== "age" && hold !== "message") {
       alert("Invalid input! Please enter 'name', 'age', or 'message'.");
-      return; // Exit the function if the input is invalid.
+      window.location.reload(); // Refresh the page when no valid input is provided.
     }
     let holdnew = window.prompt("Enter: ");
     if (hold === "name") {
