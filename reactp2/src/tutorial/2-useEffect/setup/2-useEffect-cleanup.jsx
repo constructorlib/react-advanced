@@ -26,3 +26,8 @@ const UseEffectCleanup = () => {
 };
 
 export default UseEffectCleanup;
+
+/*Works on every render
+size = window.innerWidth 
+renders new size every time window changes = render
+*/
