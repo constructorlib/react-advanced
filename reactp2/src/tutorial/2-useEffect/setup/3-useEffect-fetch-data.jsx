@@ -36,3 +36,8 @@ const UseEffectFetchData = () => {
 };
 
 export default UseEffectFetchData;
+
+/*
+Look at it tomorrow. 
+And start 3-conditional rendering from scratch.
+*/
