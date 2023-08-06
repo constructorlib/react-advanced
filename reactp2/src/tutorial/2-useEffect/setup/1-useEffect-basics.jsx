@@ -12,14 +12,6 @@ const UseEffectBasics = () => {
       document.title = `No Messages`;
     }
   }, [value]);
-
-  useEffect(() => {
-    if (value == 1) {
-      document.title = `Yeah boi (${value})`;
-      setValue(value + 999);
-      // setValue(value + 0);
-    }
-  });
   return (
     <>
       <h2>{value}</h2>
@@ -34,3 +26,16 @@ const UseEffectBasics = () => {
 };
 
 export default UseEffectBasics;
+/*
+useEffect works when component renders
+
+ useEffect(() => {
+    if (value == 1) {
+      document.title = `Yeah boi (${value})`;
+      setValue(value + 999);
+      // setValue(value + 0);
+    }
+  });
+
+  So yeah, when I press onClick, the value increases or resets
+*/
