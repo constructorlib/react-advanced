@@ -12,21 +12,21 @@ const url = "https://api.github.com/users/QuincyLarson";
 
 // myForEach(names, console.log);
 
-function orderPizza(callback) {
-  setTimeout(() => {
-    let pizza = "🍕";
-    callback(pizza);
-  }, 2000);
-}
+// function orderPizza(callback) {
+//   setTimeout(() => {
+//     let pizza = "🍕";
+//     callback(pizza);
+//   }, 2000);
+// }
 
-function isReady(pizza) {
-  console.log(`Eat me ${pizza}`);
-}
+// function isReady(pizza) {
+//   console.log(`Eat me ${pizza}`);
+// }
 
-orderPizza(isReady);
+// orderPizza(isReady);
 
-// Removed the problematic if block.
-console.log("Call Abu Bakr");
+// // Removed the problematic if block.
+// console.log("Call Abu Bakr");
 
 // Async = part of code depends on some other part of code
 // function myLog(name) {
@@ -34,10 +34,9 @@ console.log("Call Abu Bakr");
 // }
 const MultipleReturns = () => {
   const [loading, setLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-  const [user, setUser] = useState("dflt usr");
-  if (loading) return <h2>loading...</h2>;
-  if (isError) return <h2>error... </h2>;
+  if (loading) {
+    return <h2>Loading...</h2>;
+  }
   return <p>Hey!</p>;
 
   //   // I can set up whatever here
