@@ -40,7 +40,11 @@ const MultipleReturns = () => {
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
-      .then((user) => console.log(user))
+      .then((user) => {
+        const { login } = user;
+        setUser(login);
+        setLoading(false);
+      })
       .catch((error) => console.log(error));
   }, []);
 
